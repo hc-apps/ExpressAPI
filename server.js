@@ -1,11 +1,8 @@
 const express = require("express")
 const app = express()
 const cors = require("cors")
-const corsOptions = {
-    origin: ["http://localhost:3000"]
-}
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.get("/api", (req, res) => {
     res.send('Hello from server!');
